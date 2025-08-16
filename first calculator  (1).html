@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Mortal Calculator1 || SALEH AMOO</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            padding: 0;
+            background: none;
+            background: linear-gradient(to left, #7808f0, #06bdf5);
+        }
+        
+        div {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        div h1 {
+            font-size: 72px;
+        }
+        
+        div h2 {
+            font-size: 36px;
+        }
+        
+        div h2 span {
+            display: inline-block;
+            color: white;
+            margin: 0 80px;
+        }
+        
+        .calform {
+            width: 500px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.25px;
+            text-align: center;
+        }
+        
+        #answer-display {
+            background-color: #E0FFFF;
+            border: 2px solid rgb(0, 255, 255);
+            border-radius: 35px;
+            font-size: 22px;
+            font-weight: 400;
+            height: 55px;
+            color: #222;
+            margin-bottom: 5px;
+        }
+        
+        .num-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 2px;
+            background-color: #87CEFA;
+        }
+        
+        .oprator {
+            width: 55px;
+            height: 55px;
+            background-color: #87CEFA;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 2px;
+            transition: 0.25px;
+            cursor: pointer;
+        }
+        
+        .oprator:hover {
+            background-color: #F0FFFF;
+        }
+        
+        #zero {
+            width: 116px;
+            height: 55px;
+            background-color: #87CEFA;
+            border-radius: 32px;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 2px;
+        }
+        
+        .button {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #4169E1;
+            color: white;
+            border: solid black 0.5px;
+            width: 100%;
+            border-radius: 5px;
+            height: 70%;
+            outline: none;
+        }
+        
+        .button:active {
+            background: #B0C4DE;
+            -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+            -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+        }
+    </style>
+    <div>
+        <h1>Mortal Calculator</h1>
+    </div>
+    <style>
+        h1 {
+            font-style: italic;
+            color: #191970;
+        }
+    </style>
+
+    <form name="calform" class="calform" action="index.html" method="post">
+        <input type="text" min="1" max="16" name="answer" id="answer-display" />
+        <br />
+        <input type="button" class="num-btn" value="C" onclick="calform.answer .value=''" style="background-color: #fb0066;" />
+        <input type="button" class="num-btn" value="DEL" style="background-color: #fb0066;" onclick="calform.answer .value=calform.answer .value.substring(0,calform.answer .value.length*1-1)" />
+        <input type="button" class="num-btn" value="^" onclick="calform.answer .value+='**'" />
+        <input type="button" class="num-btn" value="÷" onclick="calform.answer .value+='/'" />
+        <br />
+        <input type="button" class="num-btn" value="7" onclick="calform.answer .value+='7'" />
+        <input type="button" class="num-btn" value="8" onclick="calform.answer .value+='8'" />
+        <input type="button" class="num-btn" value="9" onclick="calform.answer .value+='9'" />
+        <input type="button" class="num-btn" value="×" onclick="calform.answer .value+='*'" />
+        <br />
+        <input type="button" class="num-btn" value="4" onclick="calform.answer .value+='4'" />
+        <input type="button" class="num-btn" value="5" onclick="calform.answer .value+='5'" />
+        <input type="button" class="num-btn" value="6" onclick="calform.answer .value+='6'" />
+        <input type="button" class="num-btn" value="-" onclick="calform.answer .value+='-'" />
+        <br />
+        <input type="button" class="num-btn" value="1" onclick="calform.answer .value+='1'" />
+        <input type="button" class="num-btn" value="2" onclick="calform.answer .value+='2'" />
+        <input type="button" class="num-btn" value="3" onclick="calform.answer .value+='3'" />
+        <input type="button" class="num-btn" value="+" onclick="calform.answer .value+='+'" />
+        <br />
+        <input type="button" id="zero" value="0" onclick="calform.answer .value+='0'" />
+        <input type="button" class="num-btn" value="." onclick="calform.answer .value+='.'" />
+        <input type="button" class="oprator" value="=" onclick="calform.answer .value=eval(calform.answer.value)" style="background-color: #fb0066;" />
+    </form>
+</body>
+
+</html>
